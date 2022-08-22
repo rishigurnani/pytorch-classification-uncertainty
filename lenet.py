@@ -20,4 +20,5 @@ class LeNet(nn.Module):
         if self.use_dropout:
             x = F.dropout(x, training=self.training)
         x = self.fc2(x)
+        # Note that the output of this Net is prior to the ReLU!
         return x
