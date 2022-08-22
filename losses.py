@@ -50,6 +50,9 @@ def loglikelihood_loss(y, alpha, device=None):
 
 
 def mse_loss(y, alpha, epoch_num, num_classes, annealing_step, device=None):
+    # It looks like this is the loss function defined in page 6 of the paper.
+    # If so, this should be the loss function that I implement. Note that `alpha`
+    # should be computed before this function.
     if not device:
         device = get_device()
     y = y.to(device)
